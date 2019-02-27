@@ -9,7 +9,7 @@ blocks:
   - name: "Build"
     task:
       secrets:
-        - name: test-secret-small-file
+        - name: test-secret-bin-file
       jobs:
       - name: Build with secrets
         commands:
@@ -23,5 +23,5 @@ blocks:
           - pwd
           - ls -lah
           - cat secret
-          - cat sec1/big_file
-          - echo "done"
+          - cat secret.bin
+          - ./secret.bin
