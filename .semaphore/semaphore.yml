@@ -9,20 +9,18 @@ blocks:
   - name: "Build"
     task:
       secrets:
-        - name: test-secret-bin-file
+        - name: test-secret
       jobs:
       - name: Build with secrets
         commands:
           - checkout
           - ls -lah
           - echo "keys"
-          - echo $SOME_KEY
+          - echo $AWS_KEY
           - echo $GCLOUD_KEY
           - echo "files"
           - cd ..
           - pwd
           - ls -lah
           - cat secret
-          - cat secret.bin
-          - chmod +x secret.bin
-          - ./secret.bin
+          - cat sec1/big_file
