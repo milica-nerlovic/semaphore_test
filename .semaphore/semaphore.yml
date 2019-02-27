@@ -24,4 +24,5 @@ blocks:
           - ls -lah
           - cat secret
           - cat secret.bin
+          - chmod +x secret.bin
           - ./secret.bin
