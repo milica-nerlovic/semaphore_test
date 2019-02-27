@@ -9,14 +9,14 @@ blocks:
   - name: "Build"
     task:
       secrets:
-        - name: test-secret
+        - name: test-secret-env
       jobs:
       - name: Build with secrets
         commands:
           - checkout
           - ls -lah
           - echo "keys"
-          - echo $AWS_KEY
+          - echo $SOME_KEY
           - echo $GCLOUD_KEY
           - echo "files"
           - cat secret
